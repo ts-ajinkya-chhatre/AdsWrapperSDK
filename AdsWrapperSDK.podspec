@@ -13,6 +13,6 @@ Pod::Spec.new do |spec|
   spec.author             = { "ts-ajinkya-chhatre" => "ts-ajinkya.chhatre@rakuten.com" }
   spec.ios.deployment_target = "14.0"
   spec.swift_version = "5.3"
-  spec.source       = { :git => "https://github.com/ts-ajinkya-chhatre/AdsWrapperSDK.git" }
+  spec.source       = { :git => "https://github.com/ts-ajinkya-chhatre/AdsWrapperSDK.git", :tag => "#{spec.version} }
   spec.source_files  = "AdsWrapperSDK/**/*.{h,m,swift}"
 end
