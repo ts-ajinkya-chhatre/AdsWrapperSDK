@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/ts-ajinkya-chhatre/AdsWrapperSDK.git"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "ts-ajinkya-chhatre" => "ts-ajinkya.chhatre@rakuten.com" }
+  spec.module_name  = 'AdsWrapperSDK'
 
   spec.platform = :ios, '12.0'
   spec.ios.deployment_target = "14.0"
