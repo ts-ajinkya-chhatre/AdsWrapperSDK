@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AdsWrapperSDK/AdsWrapperSDK.framework
+${PODS_ROOT}/RUNABanner/Carthage/Build/iOS/RUNABanner.framework
+${PODS_ROOT}/RUNACore/Carthage/Build/iOS/RUNACore.framework

@@ -1,0 +1,12 @@
+framework module RUNABanner {
+    umbrella header "RUNABanner.h"
+
+    export *
+    module * { export * }
+    
+    module Extension {
+        header "RUNABannerViewExtension.h"
+        header "RUNABannerGroupExtension.h"
+        export *
+    }
+}

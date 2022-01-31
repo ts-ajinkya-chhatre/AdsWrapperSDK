@@ -6,36 +6,37 @@
 //
 
 import Foundation
+import RUNABanner
 
-public final class AdSDKManager {
-
-	static let sharedInstance = AdSDKManager()
+public final class AdSDKManager
+{
+	public static let sharedInstance = AdSDKManager()
 
 	var viewsCache: [AdType: [AdsBannerView]] = [:]
-	// var runaAddSession: RUNAAdSession
+	var runaAddSession: RUNAAdSession = RUNAAdSession()
 	var adSpotIDHelper: AdSpotIDHelper = AdSpotIDHelper()
 
-	func createSingleAddViewForAddType(addType: AdType, cacheView:Bool, completion: (AdsBannerView)-> Void)
+	public func createSingleAddViewForAddType(addType: AdType, cacheView:Bool) -> AdsBannerView
+	{
+		return AdsBannerView(adSpotID: "1603", isViewCached: cacheView, adType: addType)
+	}
+
+	public func createMultipleAddViewsForAddType(addType: AdType, cacheView:Bool) -> [AdsBannerView]
+	{
+		return []
+	}
+
+	public func fetchAdsBannerViewForAddSpotID(addSpotID: String)
 	{
 
 	}
 
-	func createMultipleAddViewsForAddType(addType: AdType, cacheView:Bool, completion: ([AdsBannerView])-> Void)
+	public func cacheBannerView(view: AdsBannerView)
 	{
 
 	}
 
-	func fetchAdsBannerViewForAddSpotID(addSpotID: String)
-	{
-
-	}
-
-	func cacheBannerView(view: AdsBannerView)
-	{
-
-	}
-
-	func removeBannerViewFromCache(addSpotID: String)
+	public func removeBannerViewFromCache(addSpotID: String)
 	{
 
 	}

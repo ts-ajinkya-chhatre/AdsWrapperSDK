@@ -1,0 +1,34 @@
+PODS:
+  - AdsWrapperSDK (0.0.1):
+    - RUNA/Banner (= 1.5.1)
+  - RUNA/Banner (1.5.1):
+    - RUNA/CoreOnly
+    - RUNABanner (~> 1.4.1)
+  - RUNA/CoreOnly (1.5.1):
+    - RUNACore (~> 1.4.0)
+  - RUNABanner (1.4.2):
+    - RUNACore (~> 1.4)
+  - RUNACore (1.4.1)
+
+DEPENDENCIES:
+  - AdsWrapperSDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/rakuten-ads/Rakuten-Ads-iOS:
+    - RUNA
+    - RUNABanner
+    - RUNACore
+
+EXTERNAL SOURCES:
+  AdsWrapperSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AdsWrapperSDK: 8ea0620ae1947c0ce1adc66ba56c8f97e082bf32
+  RUNA: ca41cadda41ae838d76300d0706d4604bdfd4511
+  RUNABanner: 0b6872f77a420ad4127e65bbcb1977534b04f6b9
+  RUNACore: 920fe922a80232304fe0774f3937700cb0ae66ea
+
+PODFILE CHECKSUM: 4365e12e398b85376fbba635e159d12d42c1591a
+
+COCOAPODS: 1.9.3

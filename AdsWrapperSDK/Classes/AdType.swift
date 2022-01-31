@@ -7,10 +7,19 @@
 
 import Foundation
 
-enum AdType {
+public enum BannerLoadResultType
+{
+	case success
+	case failure
+	case clicked
+}
+
+public enum AdType
+{
 	case callHistory
 	case afterCallEnds
 	case messageList
+	case wallet
 	case missionHomeScreen
 	case missionsUnclaimedPointsScreen
 	case discovery

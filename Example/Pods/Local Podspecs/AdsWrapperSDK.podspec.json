@@ -1,0 +1,29 @@
+{
+  "name": "AdsWrapperSDK",
+  "version": "0.0.1",
+  "summary": "A cocoapods iOS wrapper library over the Rakuten RUNA iOS Ads SDK",
+  "description": "A cocoapods iOS wrapper library over the Rakuten RUNA iOS Ads SDK whick applications can use.",
+  "homepage": "https://github.com/ts-ajinkya-chhatre/AdsWrapperSDK.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ts-ajinkya-chhatre": "ts-ajinkya.chhatre@rakuten.com"
+  },
+  "platforms": {
+    "ios": "14.0"
+  },
+  "swift_versions": "5.3",
+  "source": {
+    "git": "https://github.com/ts-ajinkya-chhatre/AdsWrapperSDK.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "AdsWrapperSDK/**/*.{h,m,swift}",
+  "dependencies": {
+    "RUNA/Banner": [
+      "1.5.1"
+    ]
+  },
+  "swift_version": "5.3"
+}

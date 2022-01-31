@@ -7,11 +7,10 @@
 
 import Foundation
 
-protocol BannerView
+public protocol BannerView
 {
-	var adSpotID : String { get set }
 	var isViewCached: Bool  { get set }
 	var adType: AdType { get set }
-	func load()
-	func remove()
+	func loadBanner(completion: @escaping (BannerLoadResultType)-> Void)
+	func removeBanner()
 }

@@ -1,0 +1,12 @@
+source "https://github.com/rakuten-ads/Rakuten-Ads-iOS"
+
+target 'AdsWrapperSDKExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AdsWrapperSDKExample
+
+  pod 'AdsWrapperSDK', :path => '../'
+  #pod 'AdsWrapperSDK', :git => "git@github.com:ts-ajinkya-chhatre/AdsWrapperSDK.git"
+
+end

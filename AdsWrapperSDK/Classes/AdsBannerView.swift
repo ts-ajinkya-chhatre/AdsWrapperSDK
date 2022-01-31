@@ -6,19 +6,19 @@
 //
 
 import UIKit
+import RUNABanner
 
-class AdsBannerView: UIView, BannerView
+public class AdsBannerView: RUNABannerView, BannerView
 {
-	var adSpotID: String
-	var isViewCached: Bool
-	var adType: AdType
+	public var isViewCached: Bool
+	public var adType: AdType
 
 	init(adSpotID: String, isViewCached: Bool, adType: AdType)
 	{
-		self.adSpotID = adSpotID
 		self.isViewCached = isViewCached
 		self.adType = adType
 		super.init(frame: CGRect.zero)
+		super.adSpotId = adSpotID
 	}
 
 	required init?(coder: NSCoder)
@@ -26,13 +26,35 @@ class AdsBannerView: UIView, BannerView
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func load()
+	public func loadBanner(completion: @escaping (BannerLoadResultType)-> Void)
 	{
-		print("load")
+		self.load
+		{ (_, event) in
+			switch event.eventType
+			{
+			case .succeeded:
+				completion(.success)
+			case .failed:
+				completion(.failure)
+				switch event.error
+				{
+				case .unfilled:
+					print("ad unavailable")
+				case .network:
+					print("network unavailable")
+				default:
+					break
+				}
+			case .clicked:
+				completion(.clicked)
+			default:
+				break
+			}
+		}
 	}
 
-	func remove()
+	public func removeBanner()
 	{
-		print("remove")
+		print("removeBanner")
 	}
 }
