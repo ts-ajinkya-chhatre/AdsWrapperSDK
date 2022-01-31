@@ -16,6 +16,11 @@
 		ACCEE9AA27A7C8AB0090B386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCEE9A827A7C8AB0090B386 /* Main.storyboard */; };
 		ACCEE9AC27A7C8AC0090B386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCEE9AB27A7C8AC0090B386 /* Assets.xcassets */; };
 		ACCEE9AF27A7C8AC0090B386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCEE9AD27A7C8AC0090B386 /* LaunchScreen.storyboard */; };
+		ACCEE9B627A7CDF20090B386 /* AdSDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEE9B527A7CDF20090B386 /* AdSDKManager.swift */; };
+		ACCEE9B827A7D0690090B386 /* AdsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEE9B727A7D0690090B386 /* AdsBannerView.swift */; };
+		ACCEE9BA27A7D07C0090B386 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEE9B927A7D07C0090B386 /* BannerView.swift */; };
+		ACCEE9BC27A7D2B90090B386 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEE9BB27A7D2B90090B386 /* AdType.swift */; };
+		ACCEE9BE27A7DE150090B386 /* AdSpotIDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEE9BD27A7DE150090B386 /* AdSpotIDHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		ACCEE9AB27A7C8AC0090B386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCEE9AE27A7C8AC0090B386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACCEE9B027A7C8AC0090B386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCEE9B527A7CDF20090B386 /* AdSDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSDKManager.swift; sourceTree = "<group>"; };
+		ACCEE9B727A7D0690090B386 /* AdsBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsBannerView.swift; sourceTree = "<group>"; };
+		ACCEE9B927A7D07C0090B386 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		ACCEE9BB27A7D2B90090B386 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
+		ACCEE9BD27A7DE150090B386 /* AdSpotIDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpotIDHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		ACCEE98427A7C76B0090B386 /* AdsWrapperSDK */ = {
 			isa = PBXGroup;
 			children = (
+				ACCEE9B427A7CDD00090B386 /* Classes */,
 				ACCEE98527A7C76B0090B386 /* AdsWrapperSDK.h */,
 				ACCEE98627A7C76B0090B386 /* Info.plist */,
 			);
@@ -121,6 +132,18 @@
 				ACCEE9B027A7C8AC0090B386 /* Info.plist */,
 			);
 			path = AdsWrapperSDKExample;
+			sourceTree = "<group>";
+		};
+		ACCEE9B427A7CDD00090B386 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEE9B527A7CDF20090B386 /* AdSDKManager.swift */,
+				ACCEE9B927A7D07C0090B386 /* BannerView.swift */,
+				ACCEE9BB27A7D2B90090B386 /* AdType.swift */,
+				ACCEE9B727A7D0690090B386 /* AdsBannerView.swift */,
+				ACCEE9BD27A7DE150090B386 /* AdSpotIDHelper.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +224,7 @@
 				TargetAttributes = {
 					ACCEE98127A7C76B0090B386 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					ACCEE98A27A7C76B0090B386 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -262,6 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCEE9B627A7CDF20090B386 /* AdSDKManager.swift in Sources */,
+				ACCEE9B827A7D0690090B386 /* AdsBannerView.swift in Sources */,
+				ACCEE9BC27A7D2B90090B386 /* AdType.swift in Sources */,
+				ACCEE9BA27A7D07C0090B386 /* BannerView.swift in Sources */,
+				ACCEE9BE27A7DE150090B386 /* AdSpotIDHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +467,7 @@
 		ACCEE99727A7C76B0090B386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -453,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Rakuten.AdsWrapperSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +492,7 @@
 		ACCEE99827A7C76B0090B386 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -484,6 +516,7 @@
 		ACCEE99A27A7C76B0090B386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AdsWrapperSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +534,7 @@
 		ACCEE99B27A7C76B0090B386 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AdsWrapperSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
