@@ -9,10 +9,8 @@ import Foundation
 
 public protocol BannerView
 {
+	var isViewCached: Bool  { get set }
+	var adType: AdType { get set }
 	func loadBanner(completion: @escaping (BannerLoadResultType)-> Void)
-}
-
-public protocol AdClickedDelegate
-{
-	func didClickAd(bannerView: BannerView)
+	func removeBanner()
 }

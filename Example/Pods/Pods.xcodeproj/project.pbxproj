@@ -17,6 +17,7 @@
 				0F7E20EC9E52CF1AD93981E91F277473 /* PBXTargetDependency */,
 			);
 			name = RUNA;
+			productName = RUNA;
 		};
 		3E4A575D7904EC0A62A0C3F46CDE2CF2 /* RUNACore */ = {
 			isa = PBXAggregateTarget;
@@ -26,6 +27,7 @@
 			dependencies = (
 			);
 			name = RUNACore;
+			productName = RUNACore;
 		};
 		542B320CC49489089FC4FCD8A5187DE3 /* RUNABanner */ = {
 			isa = PBXAggregateTarget;
@@ -36,6 +38,7 @@
 				A6902D4C6BEE1CD4339839A01A7485B4 /* PBXTargetDependency */,
 			);
 			name = RUNABanner;
+			productName = RUNABanner;
 		};
 /* End PBXAggregateTarget section */
 
@@ -43,13 +46,12 @@
 		2874FA5F61B85F1F7F189E017209733F /* Pods-AdsWrapperSDKExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1DF25600397D117481D3519BAEBB /* Pods-AdsWrapperSDKExample-dummy.m */; };
 		32F81973D611A1A7391318EA9D94C9E8 /* AdsWrapperSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD873ED9B4CEAFB21B23927F58E86301 /* AdsWrapperSDK-dummy.m */; };
 		4FBF4D4ED580BD7089A5E57FDC7638F7 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */; };
-		5106DC3F47642EDE2CB13C5BA2869E54 /* AdSpotIDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD011580713D3B9C6FBA8853D396E6B1 /* AdSpotIDHelper.swift */; };
 		51CBEC9D64E5015EADF2B26285B956D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		7CB7AE6367BF30C2C50BA160D2AC1D70 /* AdsWrapperSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1693537B857EBBADF39194342A9F761C /* AdsWrapperSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C10ACFAE9EF8FEF0E9FBBC397223D65 /* AdSDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E804F5C221EAE53024283983C2C0DD3 /* AdSDKManager.swift */; };
 		C2906F3ABE7BF282D852936F7A87C2C1 /* AdsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */; };
 		C91D357FF0FA3365E41C3E07A713EAE8 /* Pods-AdsWrapperSDKExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE87204CF68028651500E44733C6561 /* Pods-AdsWrapperSDKExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA476D812BE1DC1D15C9E903D660B794 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9738A4574965B13A3455EC929E8915 /* AdType.swift */; };
+		CA476D812BE1DC1D15C9E903D660B794 /* BannerLoadResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9738A4574965B13A3455EC929E8915 /* BannerLoadResultType.swift */; };
 		FD79F8D187B71243CDB364539953B030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,16 +119,16 @@
 		0DD407FF412858E9AC7A35D782EA6D91 /* RUNABanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNABanner.release.xcconfig; sourceTree = "<group>"; };
 		0EF45A8FCA96179DDE3149A167AB9BA7 /* Pods-AdsWrapperSDKExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdsWrapperSDKExample.release.xcconfig"; sourceTree = "<group>"; };
 		1693537B857EBBADF39194342A9F761C /* AdsWrapperSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AdsWrapperSDK-umbrella.h"; sourceTree = "<group>"; };
-		1D526FC929227C2CC730A4CFE5F20A6D /* Pods_AdsWrapperSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AdsWrapperSDKExample.framework; path = "Pods-AdsWrapperSDKExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D526FC929227C2CC730A4CFE5F20A6D /* Pods_AdsWrapperSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsWrapperSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E804F5C221EAE53024283983C2C0DD3 /* AdSDKManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdSDKManager.swift; path = AdsWrapperSDK/Classes/AdSDKManager.swift; sourceTree = "<group>"; };
 		24E3A2676C332A6E8C79BE31959FD1B2 /* RUNACore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RUNACore.framework; path = Carthage/Build/iOS/RUNACore.framework; sourceTree = "<group>"; };
-		2C9738A4574965B13A3455EC929E8915 /* AdType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdType.swift; path = AdsWrapperSDK/Classes/AdType.swift; sourceTree = "<group>"; };
-		3117C486077AAAC2E7C24D66F26F8071 /* AdsWrapperSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AdsWrapperSDK.framework; path = AdsWrapperSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9738A4574965B13A3455EC929E8915 /* BannerLoadResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerLoadResultType.swift; path = AdsWrapperSDK/Classes/BannerLoadResultType.swift; sourceTree = "<group>"; };
+		3117C486077AAAC2E7C24D66F26F8071 /* AdsWrapperSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdsWrapperSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39085FDC5A9B494589416602621E6E72 /* RUNABanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RUNABanner.framework; path = Carthage/Build/iOS/RUNABanner.framework; sourceTree = "<group>"; };
 		4921EB1DD562E8B971060A14A279D151 /* Pods-AdsWrapperSDKExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdsWrapperSDKExample-Info.plist"; sourceTree = "<group>"; };
 		4A737562D633DD5C64170FEA594AB276 /* AdsWrapperSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AdsWrapperSDK-prefix.pch"; sourceTree = "<group>"; };
 		4CB93A479D071FBC4D4F9213C417E41B /* Pods-AdsWrapperSDKExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AdsWrapperSDKExample.modulemap"; sourceTree = "<group>"; };
-		52D8AB7710FC143F1C30E194EACC697E /* AdsWrapperSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AdsWrapperSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		52D8AB7710FC143F1C30E194EACC697E /* AdsWrapperSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AdsWrapperSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5AB5767C0336E4F60DC66699C5411052 /* AdsWrapperSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AdsWrapperSDK-Info.plist"; sourceTree = "<group>"; };
 		5F29BF4813E36034C7E6E15DD0194336 /* AdsWrapperSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AdsWrapperSDK.modulemap; sourceTree = "<group>"; };
 		6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdsBannerView.swift; path = AdsWrapperSDK/Classes/AdsBannerView.swift; sourceTree = "<group>"; };
@@ -135,8 +137,8 @@
 		804D5759797AF9C0593A5E26B4F50DE3 /* AdsWrapperSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdsWrapperSDK.release.xcconfig; sourceTree = "<group>"; };
 		82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerView.swift; path = AdsWrapperSDK/Classes/BannerView.swift; sourceTree = "<group>"; };
 		8646E20A5881E7B27EBC38A2C940E4DB /* RUNABanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNABanner.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EEF613A50A5FFD095217E3D364BDB31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EEF613A50A5FFD095217E3D364BDB31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A803B41EC8EFF9015843B811D62FEC03 /* RUNACore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNACore.debug.xcconfig; sourceTree = "<group>"; };
 		AA5D8AE0E068A6F0598097ACAA54FF34 /* RUNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNA.release.xcconfig; sourceTree = "<group>"; };
 		B13F66D61F8E18F747CB51DA72EAA40A /* Pods-AdsWrapperSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdsWrapperSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,9 +148,8 @@
 		DD873ED9B4CEAFB21B23927F58E86301 /* AdsWrapperSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AdsWrapperSDK-dummy.m"; sourceTree = "<group>"; };
 		DFE87204CF68028651500E44733C6561 /* Pods-AdsWrapperSDKExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AdsWrapperSDKExample-umbrella.h"; sourceTree = "<group>"; };
 		EA652FBB25FC8FAE0BA6CB164A20D37E /* Pods-AdsWrapperSDKExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AdsWrapperSDKExample-frameworks.sh"; sourceTree = "<group>"; };
-		EE7484F32F76CA1803F419B236100109 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EE7484F32F76CA1803F419B236100109 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FCAFDAFE799EE9EE71CB67EC4A904E2F /* Pods-AdsWrapperSDKExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AdsWrapperSDKExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FD011580713D3B9C6FBA8853D396E6B1 /* AdSpotIDHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdSpotIDHelper.swift; path = AdsWrapperSDK/Classes/AdSpotIDHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +213,6 @@
 				E981B7041010814258974889BE381143 /* Frameworks */,
 				A523CE0B0A43F26536F66C9BA7074F76 /* Support Files */,
 			);
-			name = RUNACore;
 			path = RUNACore;
 			sourceTree = "<group>";
 		};
@@ -235,10 +235,9 @@
 		893AF78BF67E7036E0F3155C7CAED0D7 /* AdsWrapperSDK */ = {
 			isa = PBXGroup;
 			children = (
-				6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */,
 				1E804F5C221EAE53024283983C2C0DD3 /* AdSDKManager.swift */,
-				FD011580713D3B9C6FBA8853D396E6B1 /* AdSpotIDHelper.swift */,
-				2C9738A4574965B13A3455EC929E8915 /* AdType.swift */,
+				6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */,
+				2C9738A4574965B13A3455EC929E8915 /* BannerLoadResultType.swift */,
 				82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */,
 				FD481B77DE8F10A47407CC8664684432 /* Pod */,
 				A838E9393E6416B02ABF4C74D9300FF2 /* Support Files */,
@@ -324,7 +323,6 @@
 			children = (
 				FFA2E2C88CAFBE2B8FCAC98C05612B83 /* Support Files */,
 			);
-			name = RUNA;
 			path = RUNA;
 			sourceTree = "<group>";
 		};
@@ -342,7 +340,6 @@
 				3DA2962B54EB4D5F5B0FF01C56345C70 /* Frameworks */,
 				C532BA137BE14EC53E4DAEE013329122 /* Support Files */,
 			);
-			name = RUNABanner;
 			path = RUNABanner;
 			sourceTree = "<group>";
 		};
@@ -484,9 +481,8 @@
 			files = (
 				C2906F3ABE7BF282D852936F7A87C2C1 /* AdsBannerView.swift in Sources */,
 				8C10ACFAE9EF8FEF0E9FBBC397223D65 /* AdSDKManager.swift in Sources */,
-				5106DC3F47642EDE2CB13C5BA2869E54 /* AdSpotIDHelper.swift in Sources */,
 				32F81973D611A1A7391318EA9D94C9E8 /* AdsWrapperSDK-dummy.m in Sources */,
-				CA476D812BE1DC1D15C9E903D660B794 /* AdType.swift in Sources */,
+				CA476D812BE1DC1D15C9E903D660B794 /* BannerLoadResultType.swift in Sources */,
 				4FBF4D4ED580BD7089A5E57FDC7638F7 /* BannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

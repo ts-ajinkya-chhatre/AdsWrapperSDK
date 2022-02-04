@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		39D1270785D9ED44F1F80EA8 /* Pods_AdsWrapperSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A918A28B3F10633E146297A9 /* Pods_AdsWrapperSDKExample.framework */; };
+		AC4B860027AD010E00299B29 /* MultipleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */; };
+		ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */; };
+		ACC902E327AD0BFE00B1DFBF /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */; };
+		ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E427AD0C1300B1DFBF /* BannerCell.swift */; };
+		ACC902E727AD0C1300B1DFBF /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC902E527AD0C1300B1DFBF /* BannerCell.xib */; };
 		ACCEEA4627A813360090B386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEA4527A813360090B386 /* AppDelegate.swift */; };
 		ACCEEA4827A813360090B386 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEA4727A813360090B386 /* SceneDelegate.swift */; };
 		ACCEEA4A27A813360090B386 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEA4927A813360090B386 /* ViewController.swift */; };
@@ -19,6 +24,11 @@
 /* Begin PBXFileReference section */
 		A6390A22FC754885A30633CB /* Pods-AdsWrapperSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsWrapperSDKExample.debug.xcconfig"; path = "Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A918A28B3F10633E146297A9 /* Pods_AdsWrapperSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsWrapperSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAdsViewController.swift; sourceTree = "<group>"; };
+		ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		ACC902E427AD0C1300B1DFBF /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		ACC902E527AD0C1300B1DFBF /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
 		ACCEEA4227A813360090B386 /* AdsWrapperSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsWrapperSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEEA4527A813360090B386 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCEEA4727A813360090B386 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +60,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ACC902DF27AD0BE600B1DFBF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */,
+				ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */,
+				ACC902E427AD0C1300B1DFBF /* BannerCell.swift */,
+				ACC902E527AD0C1300B1DFBF /* BannerCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		ACCEEA3927A813360090B386 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +95,8 @@
 				ACCEEA4527A813360090B386 /* AppDelegate.swift */,
 				ACCEEA4727A813360090B386 /* SceneDelegate.swift */,
 				ACCEEA4927A813360090B386 /* ViewController.swift */,
+				AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */,
+				ACC902DF27AD0BE600B1DFBF /* Cells */,
 				ACCEEA4B27A813360090B386 /* Main.storyboard */,
 				ACCEEA4E27A813370090B386 /* Assets.xcassets */,
 				ACCEEA5027A813370090B386 /* LaunchScreen.storyboard */,
@@ -88,7 +111,6 @@
 				A6390A22FC754885A30633CB /* Pods-AdsWrapperSDKExample.debug.xcconfig */,
 				B99C854F6406970D848A7687 /* Pods-AdsWrapperSDKExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,7 +125,7 @@
 				ACCEEA3E27A813360090B386 /* Sources */,
 				ACCEEA3F27A813360090B386 /* Frameworks */,
 				ACCEEA4027A813360090B386 /* Resources */,
-				449FBA4F1E4B7A0144899760 /* [CP] Embed Pods Frameworks */,
+				0636AC23DCA5F9D6A3BBFA56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,14 +174,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCEEA5227A813370090B386 /* LaunchScreen.storyboard in Resources */,
+				ACC902E327AD0BFE00B1DFBF /* InfoCell.xib in Resources */,
 				ACCEEA4F27A813370090B386 /* Assets.xcassets in Resources */,
 				ACCEEA4D27A813360090B386 /* Main.storyboard in Resources */,
+				ACC902E727AD0C1300B1DFBF /* BannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0636AC23DCA5F9D6A3BBFA56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		24D2C30FDD0DC192AD0F7BB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,23 +223,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		449FBA4F1E4B7A0144899760 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,8 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCEEA4A27A813360090B386 /* ViewController.swift in Sources */,
+				AC4B860027AD010E00299B29 /* MultipleAdsViewController.swift in Sources */,
 				ACCEEA4627A813360090B386 /* AppDelegate.swift in Sources */,
 				ACCEEA4827A813360090B386 /* SceneDelegate.swift in Sources */,
+				ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */,
+				ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

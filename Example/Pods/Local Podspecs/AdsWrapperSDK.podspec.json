@@ -11,6 +11,7 @@
   "authors": {
     "ts-ajinkya-chhatre": "ts-ajinkya.chhatre@rakuten.com"
   },
+  "module_name": "AdsWrapperSDK",
   "platforms": {
     "ios": "14.0"
   },

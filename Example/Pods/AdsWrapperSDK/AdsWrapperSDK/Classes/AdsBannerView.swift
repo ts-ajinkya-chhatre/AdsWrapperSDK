@@ -10,10 +10,13 @@ import RUNABanner
 
 public class AdsBannerView: RUNABannerView, BannerView
 {
-	var adClickDelegate: AdClickedDelegate?
+	public var isViewCached: Bool
+	public var adType: AdType
 
-	init(adSpotID: String)
+	init(adSpotID: String, isViewCached: Bool, adType: AdType)
 	{
+		self.isViewCached = isViewCached
+		self.adType = adType
 		super.init(frame: CGRect.zero)
 		super.adSpotId = adSpotID
 	}
@@ -43,7 +46,7 @@ public class AdsBannerView: RUNABannerView, BannerView
 					break
 				}
 			case .clicked:
-				self.adClickDelegate?.didClickAd(bannerView: self)
+				completion(.clicked)
 			default:
 				break
 			}
