@@ -10,6 +10,8 @@ import AdsWrapperSDK
 
 class GroupBannerCell: UITableViewCell {
 
+	var bannerView: UIView?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -17,6 +19,12 @@ class GroupBannerCell: UITableViewCell {
 	func addBannerViewAsSubView(bannerView: BannerView) {
 		guard let adView = bannerView as? UIView else { return }
 		self.addSubview(adView)
+		self.bannerView = adView
 	}
-    
+
+	func resetCellContent() {
+		if let adView = self.bannerView {
+			adView.removeFromSuperview()
+		}
+	}
 }

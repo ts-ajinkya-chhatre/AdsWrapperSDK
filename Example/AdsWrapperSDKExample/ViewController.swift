@@ -47,17 +47,14 @@ class ViewController: UIViewController {
 
 		// Step 3: load banner Group
 		let multipleAdsViewController = storyBoard.instantiateViewController(withIdentifier: "MultipleAdsViewController") as! MultipleAdsViewController
-		let numberOfAds = 0
 		AdSDKManager.sharedInstance.loadBannersInGroup { adsBannerView, status in
 			switch status {
 				case .success:
 					multipleAdsViewController.groupAdViews.append(adsBannerView)
 
-					if numberOfAds == 4 {
-						DispatchQueue.main.async {
-							// Step 4: show Ads view in UI after all the Ads are loaded
-							self.navigationController?.pushViewController(multipleAdsViewController, animated: true)
-						}
+					DispatchQueue.main.async {
+						// Step 4: show Ads view in UI after all the Ads are loaded
+						self.navigationController?.pushViewController(multipleAdsViewController, animated: true)
 					}
 
 				case .failure:

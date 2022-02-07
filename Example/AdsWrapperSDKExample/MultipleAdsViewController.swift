@@ -49,9 +49,9 @@ class MultipleAdsViewController: UIViewController, UITableViewDataSource, UITabl
 				// load GroupBannerCell
 				if let bannerGroupCell = tableView.dequeueReusableCell(withIdentifier: GroupCellID, for: indexPath) as? GroupBannerCell
 				   {
-					let adIndex = indexPath.row / n
-					if !self.adInfo[adIndex].adLoaded {
-						bannerGroupCell.addBannerViewAsSubView(bannerView: groupAdViews[adIndex])
+					bannerGroupCell.resetCellContent()
+					if indexPath.row < groupAdViews.count {
+						bannerGroupCell.addBannerViewAsSubView(bannerView: self.groupAdViews[indexPath.row])
 					}
 					 return bannerGroupCell
 				   }
