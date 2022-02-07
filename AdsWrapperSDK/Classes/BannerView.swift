@@ -16,3 +16,9 @@ public protocol AdClickedDelegate
 {
 	func didClickAd(bannerView: BannerView)
 }
+
+public enum GroupType {
+	case none
+	case adGroup
+	case adSession
+}

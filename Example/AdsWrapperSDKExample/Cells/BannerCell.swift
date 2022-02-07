@@ -10,7 +10,6 @@ import AdsWrapperSDK
 
 class BannerCell: UITableViewCell {
 
-	var bannerView: BannerView?
 	var adLoadStateChangedAction: ((Bool) -> Void)?
 
     override func awakeFromNib() {
@@ -18,14 +17,9 @@ class BannerCell: UITableViewCell {
     }
 
 	func setUp(addSpotID: String) {
-
-		if self.bannerView == nil {
-			self.bannerView = AdSDKManager.sharedInstance.createAddView(addSpotID: addSpotID)
-			guard let adView = self.bannerView as? UIView else { return }
-			self.addSubview(adView)
-		}
-
-		self.bannerView?.loadBanner(completion: { result in
+		let bannerView = AdSDKManager.sharedInstance.createAddView(addSpotID: addSpotID)
+		self.addSubview(bannerView)
+		bannerView.loadBanner(completion: { result in
 			switch result {
 				case .success:
 					self.adLoadStateChangedAction?(true)
@@ -33,7 +27,5 @@ class BannerCell: UITableViewCell {
 					print("Failed to load BannerView")
 			}
 		})
-
 	}
-    
 }

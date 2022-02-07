@@ -38,16 +38,27 @@
                                 <state key="normal" title="Single Ad"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-yi-N2x">
-                                <rect key="frame" x="165" y="335" width="85" height="30"/>
+                                <rect key="frame" x="175" y="335" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Multiple Ads"/>
+                                <state key="normal" title="No Group"/>
+                                <connections>
+                                    <action selector="noGroupBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36K-Fk-WVe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmx-rG-xsA">
-                                <rect key="frame" x="165" y="335" width="85" height="31"/>
+                                <rect key="frame" x="130" y="410" width="156" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Multiple Ads"/>
+                                <state key="normal" title="AdSession"/>
                                 <connections>
-                                    <segue destination="fUc-1c-fi8" kind="show" id="Bcl-aX-euG"/>
+                                    <action selector="adSessionBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9SL-ns-TUZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-wf-LsB">
+                                <rect key="frame" x="130" y="491" width="156" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AdGroup"/>
+                                <connections>
+                                    <action selector="adGroupBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfF-Pp-JKl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,13 +74,13 @@
         <!--MultipleAdsViewController-->
         <scene sceneID="faN-Nl-SCO">
             <objects>
-                <viewController id="fUc-1c-fi8" userLabel="MultipleAdsViewController" customClass="MultipleAdsViewController" customModule="AdsWrapperSDKExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MultipleAdsViewController" id="fUc-1c-fi8" userLabel="MultipleAdsViewController" customClass="MultipleAdsViewController" customModule="AdsWrapperSDKExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJm-Od-X1z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvM-4E-JMQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="fUc-1c-fi8" id="gNb-5X-6eq"/>

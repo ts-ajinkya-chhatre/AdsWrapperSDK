@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		39D1270785D9ED44F1F80EA8 /* Pods_AdsWrapperSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A918A28B3F10633E146297A9 /* Pods_AdsWrapperSDKExample.framework */; };
 		AC4B860027AD010E00299B29 /* MultipleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */; };
+		AC8FC4C527B0F20B00FBD1CA /* GroupBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FC4C327B0F20B00FBD1CA /* GroupBannerCell.swift */; };
+		AC8FC4C627B0F20B00FBD1CA /* GroupBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8FC4C427B0F20B00FBD1CA /* GroupBannerCell.xib */; };
 		ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */; };
 		ACC902E327AD0BFE00B1DFBF /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */; };
 		ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E427AD0C1300B1DFBF /* BannerCell.swift */; };
@@ -25,6 +27,8 @@
 		A6390A22FC754885A30633CB /* Pods-AdsWrapperSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsWrapperSDKExample.debug.xcconfig"; path = "Target Support Files/Pods-AdsWrapperSDKExample/Pods-AdsWrapperSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A918A28B3F10633E146297A9 /* Pods_AdsWrapperSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsWrapperSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAdsViewController.swift; sourceTree = "<group>"; };
+		AC8FC4C327B0F20B00FBD1CA /* GroupBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBannerCell.swift; sourceTree = "<group>"; };
+		AC8FC4C427B0F20B00FBD1CA /* GroupBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupBannerCell.xib; sourceTree = "<group>"; };
 		ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		ACC902E427AD0C1300B1DFBF /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */,
 				ACC902E427AD0C1300B1DFBF /* BannerCell.swift */,
 				ACC902E527AD0C1300B1DFBF /* BannerCell.xib */,
+				AC8FC4C327B0F20B00FBD1CA /* GroupBannerCell.swift */,
+				AC8FC4C427B0F20B00FBD1CA /* GroupBannerCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCEEA5227A813370090B386 /* LaunchScreen.storyboard in Resources */,
+				AC8FC4C627B0F20B00FBD1CA /* GroupBannerCell.xib in Resources */,
 				ACC902E327AD0BFE00B1DFBF /* InfoCell.xib in Resources */,
 				ACCEEA4F27A813370090B386 /* Assets.xcassets in Resources */,
 				ACCEEA4D27A813360090B386 /* Main.storyboard in Resources */,
@@ -236,6 +243,7 @@
 				ACCEEA4827A813360090B386 /* SceneDelegate.swift in Sources */,
 				ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */,
 				ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */,
+				AC8FC4C527B0F20B00FBD1CA /* GroupBannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
