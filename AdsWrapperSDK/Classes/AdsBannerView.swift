@@ -10,7 +10,9 @@ import RUNABanner
 
 public class AdsBannerView: RUNABannerView, BannerView
 {
-	var adClickDelegate: AdClickedDelegate?
+	public var onSuccessListner: ((AdsBannerView)-> Void)?
+	public var onFailureListner: ((String) -> Void)?
+	public var onClickListner: ((AdsBannerView) -> Void)?
 
 	init(adSpotID: String)
 	{
@@ -23,35 +25,30 @@ public class AdsBannerView: RUNABannerView, BannerView
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	public func loadBanner(completion: @escaping (BannerLoadResultType)-> Void)
+	public func loadBanner()
 	{
 		self.load
 		{ (_, event) in
 			switch event.eventType
 			{
 			case .succeeded:
-				completion(.success)
+				self.onSuccessListner?(self)
 			case .failed:
-				completion(.failure)
 				switch event.error
 				{
 				case .unfilled:
 					print("ad unavailable")
+					self.onFailureListner?("ad unavailable")
 				case .network:
-					print("network unavailable")
+					self.onFailureListner?("ad unavailable")
 				default:
 					break
 				}
 			case .clicked:
-				self.adClickDelegate?.didClickAd(bannerView: self)
+				self.onClickListner?(self)
 			default:
 				break
 			}
 		}
-	}
-
-	public func removeBanner()
-	{
-		print("removeBanner")
 	}
 }

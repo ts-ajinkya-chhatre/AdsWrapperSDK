@@ -9,12 +9,11 @@ import Foundation
 
 public protocol BannerView
 {
-	func loadBanner(completion: @escaping (BannerLoadResultType)-> Void)
-}
+	var onSuccessListner: ((AdsBannerView)-> Void)? { get set }
+	var onFailureListner: ((String) -> Void)? { get set }
+	var onClickListner: ((AdsBannerView) -> Void)? { get set }
 
-public protocol AdClickedDelegate
-{
-	func didClickAd(bannerView: BannerView)
+	func loadBanner()
 }
 
 public enum GroupType {

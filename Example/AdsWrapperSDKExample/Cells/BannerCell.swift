@@ -19,13 +19,19 @@ class BannerCell: UITableViewCell {
 	func setUp(addSpotID: String) {
 		let bannerView = AdSDKManager.sharedInstance.createAddView(addSpotID: addSpotID)
 		self.addSubview(bannerView)
-		bannerView.loadBanner(completion: { result in
-			switch result {
-				case .success:
-					self.adLoadStateChangedAction?(true)
-				case .failure:
-					print("Failed to load BannerView")
-			}
-		})
+
+		bannerView.onSuccessListner = { adsBannerView in
+			self.adLoadStateChangedAction?(true)
+		}
+
+		bannerView.onFailureListner = { failureMessage in
+			print(failureMessage)
+		}
+
+		bannerView.onClickListner = { adsBannerView in
+			print("Clicked !!!")
+		}
+
+		bannerView.loadBanner()
 	}
 }

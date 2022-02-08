@@ -37,36 +37,48 @@ public final class AdSDKManager
 	}
 
 	public func addBannerViewToBannerGroup(adsBannerView: AdsBannerView) {
-		bannerGroup.banners.append(adsBannerView)
+		self.bannerGroup.banners.append(adsBannerView)
 	}
 
-	public func loadBannersInGroup(completion: @escaping (AdsBannerView, BannerLoadResultType) -> Void) {
+	public func removeBannerViewFromBannerGroup(adsBannerView: AdsBannerView) {
+		if let index = self.bannerGroup.banners.firstIndex(where: {$0.adSpotId == adsBannerView.adSpotId}) {
+			self.bannerGroup.banners.remove(at: index)
+		}
+	}
+
+	public func loadBannersInGroup() {
 		self.bannerGroup.load { (group, bannerView, event) in
 
 			guard let adsBannerView = bannerView as? AdsBannerView else { return }
 
 			switch event.eventType {
 			case .succeeded:
-				completion(adsBannerView, .success)
+				adsBannerView.onSuccessListner?(adsBannerView)
+				
 			case .failed:
-				completion(adsBannerView, .failure)
 				print("received event failed \(event.error)")
 				switch event.error {
 					case .none:
 						print("No Error")
+						adsBannerView.onFailureListner?("No Error")
 					case .internal:
 						print("Internal Error")
+						adsBannerView.onFailureListner?("Internal Error")
 					case .network:
 						print("network Error")
+						adsBannerView.onFailureListner?("network Error")
 					case .fatal:
 						print("fatal Error")
+						adsBannerView.onFailureListner?("fatal Error")
 					case .unfilled:
 						print("unfilled Error")
+						adsBannerView.onFailureListner?("unfilled Error")
 					@unknown default:
 						print("Unknown Error")
+						adsBannerView.onFailureListner?("Unknown Error")
 				}
 			default:
-				completion(adsBannerView, .failure)
+				adsBannerView.onFailureListner?("Unknown Event")
 				print("other event \(event.eventType)")
 			}
 		}
