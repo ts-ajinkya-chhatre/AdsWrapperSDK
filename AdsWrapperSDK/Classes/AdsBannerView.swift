@@ -10,9 +10,9 @@ import RUNABanner
 
 public class AdsBannerView: RUNABannerView, BannerView
 {
-	public var onSuccessListner: ((AdsBannerView)-> Void)?
-	public var onFailureListner: ((String) -> Void)?
-	public var onClickListner: ((AdsBannerView) -> Void)?
+	public var onSuccessListener: ((BannerView)-> Void)?
+	public var onFailureListener: ((BannerView, String) -> Void)?
+	public var onClickListener: ((BannerView) -> Void)?
 
 	init(adSpotID: String)
 	{
@@ -32,20 +32,20 @@ public class AdsBannerView: RUNABannerView, BannerView
 			switch event.eventType
 			{
 			case .succeeded:
-				self.onSuccessListner?(self)
+				self.onSuccessListener?(self)
 			case .failed:
 				switch event.error
 				{
 				case .unfilled:
 					print("ad unavailable")
-					self.onFailureListner?("ad unavailable")
+					self.onFailureListener?(self, "ad unavailable")
 				case .network:
-					self.onFailureListner?("ad unavailable")
+					self.onFailureListener?(self, "network failure")
 				default:
 					break
 				}
 			case .clicked:
-				self.onClickListner?(self)
+				self.onClickListener?(self)
 			default:
 				break
 			}

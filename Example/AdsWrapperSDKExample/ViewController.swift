@@ -66,17 +66,19 @@ class ViewController: UIViewController {
 	}
 
 	func assignListners(bannerView: AdsBannerView) {
-		bannerView.onSuccessListner = { adsBannerView in
+		bannerView.onSuccessListener = { bannerView in
+			guard let adsBannerView = bannerView as? AdsBannerView else { return }
 			print("Group Banner \(adsBannerView.adSpotId) Load Success")
 			self.multipleAdsVC?.groupAdViews.append(adsBannerView)
 			self.multipleAdsVC?.adsTableView.reloadData()
 		}
 
-		bannerView.onFailureListner = { failureMessage in
+		bannerView.onFailureListener = { bannerView, failureMessage in
 			print(failureMessage)
 		}
 
-		bannerView.onClickListner = { adsBannerView in
+		bannerView.onClickListener = { bannerView in
+			guard let adsBannerView = bannerView as? AdsBannerView else { return }
 			print("Group Banner \(adsBannerView.adSpotId) Clicked")
 		}
 	}

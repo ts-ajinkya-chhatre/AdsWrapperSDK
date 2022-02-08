@@ -53,32 +53,32 @@ public final class AdSDKManager
 
 			switch event.eventType {
 			case .succeeded:
-				adsBannerView.onSuccessListner?(adsBannerView)
+				adsBannerView.onSuccessListener?(adsBannerView)
 				
 			case .failed:
 				print("received event failed \(event.error)")
 				switch event.error {
 					case .none:
 						print("No Error")
-						adsBannerView.onFailureListner?("No Error")
+						adsBannerView.onFailureListener?(adsBannerView, "No Error")
 					case .internal:
 						print("Internal Error")
-						adsBannerView.onFailureListner?("Internal Error")
+						adsBannerView.onFailureListener?(adsBannerView, "Internal Error")
 					case .network:
 						print("network Error")
-						adsBannerView.onFailureListner?("network Error")
+						adsBannerView.onFailureListener?(adsBannerView, "network Error")
 					case .fatal:
 						print("fatal Error")
-						adsBannerView.onFailureListner?("fatal Error")
+						adsBannerView.onFailureListener?(adsBannerView, "fatal Error")
 					case .unfilled:
 						print("unfilled Error")
-						adsBannerView.onFailureListner?("unfilled Error")
+						adsBannerView.onFailureListener?(adsBannerView, "unfilled Error")
 					@unknown default:
 						print("Unknown Error")
-						adsBannerView.onFailureListner?("Unknown Error")
+						adsBannerView.onFailureListener?(adsBannerView, "Unknown Error")
 				}
 			default:
-				adsBannerView.onFailureListner?("Unknown Event")
+				adsBannerView.onFailureListener?(adsBannerView, "Unknown Event")
 				print("other event \(event.eventType)")
 			}
 		}

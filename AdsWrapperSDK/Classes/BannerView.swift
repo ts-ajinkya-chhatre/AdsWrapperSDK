@@ -9,9 +9,9 @@ import Foundation
 
 public protocol BannerView
 {
-	var onSuccessListner: ((AdsBannerView)-> Void)? { get set }
-	var onFailureListner: ((String) -> Void)? { get set }
-	var onClickListner: ((AdsBannerView) -> Void)? { get set }
+	var onSuccessListener: ((BannerView)-> Void)? { get set }
+	var onFailureListener: ((BannerView, String) -> Void)? { get set }
+	var onClickListener: ((BannerView) -> Void)? { get set }
 
 	func loadBanner()
 }
