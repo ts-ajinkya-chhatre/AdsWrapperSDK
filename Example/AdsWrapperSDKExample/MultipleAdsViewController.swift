@@ -29,7 +29,7 @@ class MultipleAdsViewController: UIViewController, UITableViewDataSource, UITabl
 
 	var dataSource = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen"]
 
-	var groupAdViews = [AdsBannerView]()
+	var groupAdViews = [AdBannerView]()
 	var isAdGroup = false
 
     override func viewDidLoad() {

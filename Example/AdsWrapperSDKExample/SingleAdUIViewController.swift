@@ -14,20 +14,20 @@ class SingleAdUIViewController: UIViewController {
         super.viewDidLoad()
 		self.view.backgroundColor = .white
 
-		let bannerView = AdsBannerView(adSpotID: "1603")
-		bannerView.onSuccess = { bannerView in
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			print("Banner \(adsBannerView.adSpotId) Load Success")
-		}
-
-		bannerView.onFailure = { bannerView, failureMessage in
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			print("Banner \(adsBannerView.adSpotId) Load Failure reason: \(failureMessage)")
+		let bannerView = AdBannerView(adSpotID: "1603")
+		bannerView.onAdLoaded = { result in
+			switch result {
+				case .success(let bannerView):
+					guard let adView = bannerView as? AdBannerView else { return }
+					print("Group Banner \(adView.adSpotId) Load Success")
+				case .failure(_, let errorMessage):
+					print(errorMessage)
+			}
 		}
 
 		bannerView.onClick = { bannerView in
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			print("Banner \(adsBannerView.adSpotId) Clicked")
+			guard let AdBannerView = bannerView as? AdBannerView else { return }
+			print("Banner \(AdBannerView.adSpotId) Clicked")
 		}
 
 		bannerView.load()

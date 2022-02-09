@@ -49,7 +49,7 @@
 		51CBEC9D64E5015EADF2B26285B956D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		7CB7AE6367BF30C2C50BA160D2AC1D70 /* AdsWrapperSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1693537B857EBBADF39194342A9F761C /* AdsWrapperSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACA88D8927B376F4006BF60E /* AdGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA88D8827B376F4006BF60E /* AdGroup.swift */; };
-		C2906F3ABE7BF282D852936F7A87C2C1 /* AdsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */; };
+		C2906F3ABE7BF282D852936F7A87C2C1 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FD675F1C563C9DC5E39484E8A7DB /* AdBannerView.swift */; };
 		C91D357FF0FA3365E41C3E07A713EAE8 /* Pods-AdsWrapperSDKExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE87204CF68028651500E44733C6561 /* Pods-AdsWrapperSDKExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD79F8D187B71243CDB364539953B030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -128,7 +128,7 @@
 		52D8AB7710FC143F1C30E194EACC697E /* AdsWrapperSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AdsWrapperSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5AB5767C0336E4F60DC66699C5411052 /* AdsWrapperSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AdsWrapperSDK-Info.plist"; sourceTree = "<group>"; };
 		5F29BF4813E36034C7E6E15DD0194336 /* AdsWrapperSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AdsWrapperSDK.modulemap; sourceTree = "<group>"; };
-		6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdsBannerView.swift; path = AdsWrapperSDK/Classes/AdsBannerView.swift; sourceTree = "<group>"; };
+		6138FD675F1C563C9DC5E39484E8A7DB /* AdBannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdBannerView.swift; path = AdsWrapperSDK/Classes/AdBannerView.swift; sourceTree = "<group>"; };
 		637E1DF25600397D117481D3519BAEBB /* Pods-AdsWrapperSDKExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AdsWrapperSDKExample-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		804D5759797AF9C0593A5E26B4F50DE3 /* AdsWrapperSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdsWrapperSDK.release.xcconfig; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		893AF78BF67E7036E0F3155C7CAED0D7 /* AdsWrapperSDK */ = {
 			isa = PBXGroup;
 			children = (
-				6138FD675F1C563C9DC5E39484E8A7DB /* AdsBannerView.swift */,
+				6138FD675F1C563C9DC5E39484E8A7DB /* AdBannerView.swift */,
 				82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */,
 				ACA88D8827B376F4006BF60E /* AdGroup.swift */,
 				FD481B77DE8F10A47407CC8664684432 /* Pod */,
@@ -476,7 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2906F3ABE7BF282D852936F7A87C2C1 /* AdsBannerView.swift in Sources */,
+				C2906F3ABE7BF282D852936F7A87C2C1 /* AdBannerView.swift in Sources */,
 				ACA88D8927B376F4006BF60E /* AdGroup.swift in Sources */,
 				32F81973D611A1A7391318EA9D94C9E8 /* AdsWrapperSDK-dummy.m in Sources */,
 				4FBF4D4ED580BD7089A5E57FDC7638F7 /* BannerView.swift in Sources */,

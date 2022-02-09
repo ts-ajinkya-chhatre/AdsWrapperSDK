@@ -14,44 +14,38 @@ public class AdGroup
 
 	public init(bannerViews: [BannerView]) {
 		for bannerView in bannerViews {
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			self.bannerGroup.banners.append(adsBannerView)
+			guard let AdBannerView = bannerView as? AdBannerView else { return }
+			self.bannerGroup.banners.append(AdBannerView)
 		}
 	}
 
 	public func load() {
 		self.bannerGroup.load { (group, bannerView, event) in
 
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
+			guard let AdBannerView = bannerView as? AdBannerView else { return }
 
 			switch event.eventType {
 			case .succeeded:
-				adsBannerView.onSuccess?(adsBannerView)
+				AdBannerView.onAdLoaded?(.success(AdBannerView))
 
 			case .failed:
 				print("received event failed \(event.error)")
 				switch event.error {
 					case .none:
-						print("No Error")
-						adsBannerView.onFailure?(adsBannerView, "No Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "No Error"))
 					case .internal:
-						print("Internal Error")
-						adsBannerView.onFailure?(adsBannerView, "Internal Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "Internal Error"))
 					case .network:
-						print("network Error")
-						adsBannerView.onFailure?(adsBannerView, "network Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "network Error"))
 					case .fatal:
-						print("fatal Error")
-						adsBannerView.onFailure?(adsBannerView, "fatal Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "fatal Error"))
 					case .unfilled:
-						print("unfilled Error")
-						adsBannerView.onFailure?(adsBannerView, "unfilled Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "unfilled Error"))
 					@unknown default:
-						print("Unknown Error")
-						adsBannerView.onFailure?(adsBannerView, "Unknown Error")
+						AdBannerView.onAdLoaded?(.failure(AdBannerView, "Unknown Error"))
 				}
 			default:
-				adsBannerView.onFailure?(adsBannerView, "Unknown Event")
+				AdBannerView.onAdLoaded?(.failure(AdBannerView, "Unknown Event"))
 				print("other event \(event.eventType)")
 			}
 		}

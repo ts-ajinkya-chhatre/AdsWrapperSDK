@@ -17,15 +17,16 @@ class BannerCell: UITableViewCell {
     }
 
 	func setUp(addSpotID: String) {
-		let bannerView = AdsBannerView(adSpotID: addSpotID)
+		let bannerView = AdBannerView(adSpotID: addSpotID)
 		self.addSubview(bannerView)
-
-		bannerView.onSuccess = { bannerView in
-			self.adLoadStateChangedAction?(true)
-		}
-
-		bannerView.onFailure = { bannerView, failureMessage in
-			print(failureMessage)
+		
+		bannerView.onAdLoaded = { result in
+			switch result {
+				case .success(_):
+					self.adLoadStateChangedAction?(true)
+				case .failure(_, let errorMessage):
+					print(errorMessage)
+			}
 		}
 
 		bannerView.onClick = { bannerView in

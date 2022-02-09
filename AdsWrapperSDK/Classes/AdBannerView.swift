@@ -1,5 +1,5 @@
 //
-//  AdsBannerView.swift
+//  AdBannerView.swift
 //  AdsWrapperSDK
 //
 //  Created by Chhatre, Ajinkya on 31/01/22.
@@ -8,10 +8,9 @@
 import UIKit
 import RUNABanner
 
-public class AdsBannerView: RUNABannerView, BannerView
+public class AdBannerView: RUNABannerView, BannerView
 {
-	public var onSuccess: ((BannerView)-> Void)?
-	public var onFailure: ((BannerView, String) -> Void)?
+	public var onAdLoaded: ((AdLoadResult<BannerView>) -> Void)?
 	public var onClick: ((BannerView) -> Void)?
 
 	public init(adSpotID: String)
@@ -32,15 +31,15 @@ public class AdsBannerView: RUNABannerView, BannerView
 			switch event.eventType
 			{
 			case .succeeded:
-				self.onSuccess?(self)
+				self.onAdLoaded?(.success(self))
 			case .failed:
 				switch event.error
 				{
 				case .unfilled:
 					print("ad unavailable")
-					self.onFailure?(self, "ad unavailable")
+					self.onAdLoaded?(.failure(self, "ad unavailable"))
 				case .network:
-					self.onFailure?(self, "network failure")
+					self.onAdLoaded?(.failure(self, "ad unavailable"))
 				default:
 					break
 				}

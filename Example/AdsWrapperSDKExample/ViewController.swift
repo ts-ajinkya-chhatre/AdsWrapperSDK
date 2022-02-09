@@ -30,18 +30,18 @@ class ViewController: UIViewController {
 	@IBAction func adGroupBtnClicked(_ sender: Any) {
 
 		// Step 1: Create a banner Group
-		let bannerView1 = AdsBannerView(adSpotID: "1610")
-		let bannerView2 = AdsBannerView(adSpotID: "1611")
-		let bannerView3 = AdsBannerView(adSpotID: "1612")
-		let bannerView4 = AdsBannerView(adSpotID: "1610")
+		let bannerView1 = AdBannerView(adSpotID: "1610")
+		let bannerView2 = AdBannerView(adSpotID: "1611")
+		let bannerView3 = AdBannerView(adSpotID: "1612")
+		let bannerView4 = AdBannerView(adSpotID: "1610")
 
 		self.bannerGroup = AdGroup(bannerViews: [bannerView1, bannerView2, bannerView3, bannerView4])
 
 		// Stet 2: Assign all listners
-		self.assignListners(bannerView: bannerView1)
-		self.assignListners(bannerView: bannerView2)
-		self.assignListners(bannerView: bannerView3)
-		self.assignListners(bannerView: bannerView4)
+		self.assignListners(AdBannerView: bannerView1)
+		self.assignListners(AdBannerView: bannerView2)
+		self.assignListners(AdBannerView: bannerView3)
+		self.assignListners(AdBannerView: bannerView4)
 
 		// Step 3: load banner Group
 		self.bannerGroup?.load()
@@ -57,21 +57,22 @@ class ViewController: UIViewController {
 		self.navigationController?.pushViewController(multipleAdsViewController, animated: true)
 	}
 
-	func assignListners(bannerView: AdsBannerView) {
-		bannerView.onSuccess = { bannerView in
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			print("Group Banner \(adsBannerView.adSpotId) Load Success")
-			self.multipleAdsVC?.groupAdViews.append(adsBannerView)
-			self.multipleAdsVC?.adsTableView.reloadData()
+	func assignListners(AdBannerView: AdBannerView) {
+		AdBannerView.onAdLoaded = { result in
+			switch result {
+				case .success(let bannerView):
+					guard let adView = bannerView as? AdBannerView else { return }
+					print("Group Banner \(adView.adSpotId) Load Success")
+					self.multipleAdsVC?.groupAdViews.append(AdBannerView)
+					self.multipleAdsVC?.adsTableView.reloadData()
+				case .failure(_, let errorMessage):
+					print(errorMessage)
+			}
 		}
 
-		bannerView.onFailure = { bannerView, failureMessage in
-			print(failureMessage)
-		}
-
-		bannerView.onClick = { bannerView in
-			guard let adsBannerView = bannerView as? AdsBannerView else { return }
-			print("Group Banner \(adsBannerView.adSpotId) Clicked")
+		AdBannerView.onClick = { bannerView in
+			guard let AdBannerView = bannerView as? AdBannerView else { return }
+			print("Group Banner \(AdBannerView.adSpotId) Clicked")
 		}
 	}
 }
