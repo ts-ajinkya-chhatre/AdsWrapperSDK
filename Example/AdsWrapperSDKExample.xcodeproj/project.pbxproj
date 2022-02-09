@@ -11,6 +11,7 @@
 		AC4B860027AD010E00299B29 /* MultipleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */; };
 		AC8FC4C527B0F20B00FBD1CA /* GroupBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8FC4C327B0F20B00FBD1CA /* GroupBannerCell.swift */; };
 		AC8FC4C627B0F20B00FBD1CA /* GroupBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8FC4C427B0F20B00FBD1CA /* GroupBannerCell.xib */; };
+		ACA88D8B27B390CD006BF60E /* SingleAdUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA88D8A27B390CD006BF60E /* SingleAdUIViewController.swift */; };
 		ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */; };
 		ACC902E327AD0BFE00B1DFBF /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */; };
 		ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC902E427AD0C1300B1DFBF /* BannerCell.swift */; };
@@ -29,6 +30,7 @@
 		AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAdsViewController.swift; sourceTree = "<group>"; };
 		AC8FC4C327B0F20B00FBD1CA /* GroupBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBannerCell.swift; sourceTree = "<group>"; };
 		AC8FC4C427B0F20B00FBD1CA /* GroupBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupBannerCell.xib; sourceTree = "<group>"; };
+		ACA88D8A27B390CD006BF60E /* SingleAdUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAdUIViewController.swift; sourceTree = "<group>"; };
 		ACC902E027AD0BFE00B1DFBF /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		ACC902E127AD0BFE00B1DFBF /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		ACC902E427AD0C1300B1DFBF /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				ACCEEA4527A813360090B386 /* AppDelegate.swift */,
 				ACCEEA4727A813360090B386 /* SceneDelegate.swift */,
 				ACCEEA4927A813360090B386 /* ViewController.swift */,
+				ACA88D8A27B390CD006BF60E /* SingleAdUIViewController.swift */,
 				AC4B85FF27AD010E00299B29 /* MultipleAdsViewController.swift */,
 				ACC902DF27AD0BE600B1DFBF /* Cells */,
 				ACCEEA4B27A813360090B386 /* Main.storyboard */,
@@ -242,6 +245,7 @@
 				ACCEEA4627A813360090B386 /* AppDelegate.swift in Sources */,
 				ACCEEA4827A813360090B386 /* SceneDelegate.swift in Sources */,
 				ACC902E227AD0BFE00B1DFBF /* InfoCell.swift in Sources */,
+				ACA88D8B27B390CD006BF60E /* SingleAdUIViewController.swift in Sources */,
 				ACC902E627AD0C1300B1DFBF /* BannerCell.swift in Sources */,
 				AC8FC4C527B0F20B00FBD1CA /* GroupBannerCell.swift in Sources */,
 			);

@@ -30,6 +30,7 @@ class MultipleAdsViewController: UIViewController, UITableViewDataSource, UITabl
 	var dataSource = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen"]
 
 	var groupAdViews = [AdsBannerView]()
+	var isAdGroup = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,8 @@ class MultipleAdsViewController: UIViewController, UITableViewDataSource, UITabl
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
 		if (indexPath.row % n) == 0 {
-			if AdSDKManager.sharedInstance.groupType == .adGroup {
+			if self.isAdGroup {
 				// load GroupBannerCell
 				if let bannerGroupCell = tableView.dequeueReusableCell(withIdentifier: GroupCellID, for: indexPath) as? GroupBannerCell
 				   {

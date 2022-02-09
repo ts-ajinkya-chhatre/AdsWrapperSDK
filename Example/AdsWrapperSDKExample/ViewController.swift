@@ -12,33 +12,30 @@ class ViewController: UIViewController {
 
 	let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 	var multipleAdsVC: MultipleAdsViewController?
+	var bannerGroup: AdGroup?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 	}
 
-	@IBAction func noGroupBtnClicked(_ sender: Any) {
-		AdSDKManager.sharedInstance.groupType = .none
-		self.pushMultipleAdsViewController()
+	@IBAction func singleAdBtnCliked(_ sender: Any) {
+		self.navigationController?.pushViewController(SingleAdUIViewController(), animated: true)
 	}
 
-	@IBAction func adSessionBtnClicked(_ sender: Any) {
-		AdSDKManager.sharedInstance.groupType = .adSession
-		AdSDKManager.sharedInstance.refreshAdSession()
+	@IBAction func noGroupBtnClicked(_ sender: Any) {
 		self.pushMultipleAdsViewController()
 	}
 
 	@IBAction func adGroupBtnClicked(_ sender: Any) {
 
 		// Step 1: Create a banner Group
-		AdSDKManager.sharedInstance.groupType = .adGroup
+		let bannerView1 = AdsBannerView(adSpotID: "1610")
+		let bannerView2 = AdsBannerView(adSpotID: "1611")
+		let bannerView3 = AdsBannerView(adSpotID: "1612")
+		let bannerView4 = AdsBannerView(adSpotID: "1610")
 
-
-		let bannerView1 = AdSDKManager.sharedInstance.createAddView(addSpotID: "1610")
-		let bannerView2 = AdSDKManager.sharedInstance.createAddView(addSpotID: "1611")
-		let bannerView3 = AdSDKManager.sharedInstance.createAddView(addSpotID: "1612")
-		let bannerView4 = AdSDKManager.sharedInstance.createAddView(addSpotID: "1610")
+		self.bannerGroup = AdGroup(bannerViews: [bannerView1, bannerView2, bannerView3, bannerView4])
 
 		// Stet 2: Assign all listners
 		self.assignListners(bannerView: bannerView1)
@@ -46,17 +43,12 @@ class ViewController: UIViewController {
 		self.assignListners(bannerView: bannerView3)
 		self.assignListners(bannerView: bannerView4)
 
-		// Step 2: Add all banners to Group
-		AdSDKManager.sharedInstance.addBannerViewToBannerGroup(adsBannerView: bannerView1)
-		AdSDKManager.sharedInstance.addBannerViewToBannerGroup(adsBannerView: bannerView2)
-		AdSDKManager.sharedInstance.addBannerViewToBannerGroup(adsBannerView: bannerView3)
-		AdSDKManager.sharedInstance.addBannerViewToBannerGroup(adsBannerView: bannerView4)
-
 		// Step 3: load banner Group
-		AdSDKManager.sharedInstance.loadBannersInGroup()
+		self.bannerGroup?.load()
 
 		// Step 4: show Ads view in UI after all the Ads are loaded
 		self.multipleAdsVC = storyBoard.instantiateViewController(withIdentifier: "MultipleAdsViewController") as? MultipleAdsViewController
+		self.multipleAdsVC?.isAdGroup = true
 		self.navigationController?.pushViewController(self.multipleAdsVC!, animated: true)
 	}
 
@@ -66,18 +58,18 @@ class ViewController: UIViewController {
 	}
 
 	func assignListners(bannerView: AdsBannerView) {
-		bannerView.onSuccessListener = { bannerView in
+		bannerView.onSuccess = { bannerView in
 			guard let adsBannerView = bannerView as? AdsBannerView else { return }
 			print("Group Banner \(adsBannerView.adSpotId) Load Success")
 			self.multipleAdsVC?.groupAdViews.append(adsBannerView)
 			self.multipleAdsVC?.adsTableView.reloadData()
 		}
 
-		bannerView.onFailureListener = { bannerView, failureMessage in
+		bannerView.onFailure = { bannerView, failureMessage in
 			print(failureMessage)
 		}
 
-		bannerView.onClickListener = { bannerView in
+		bannerView.onClick = { bannerView in
 			guard let adsBannerView = bannerView as? AdsBannerView else { return }
 			print("Group Banner \(adsBannerView.adSpotId) Clicked")
 		}

@@ -9,15 +9,9 @@ import Foundation
 
 public protocol BannerView
 {
-	var onSuccessListener: ((BannerView)-> Void)? { get set }
-	var onFailureListener: ((BannerView, String) -> Void)? { get set }
-	var onClickListener: ((BannerView) -> Void)? { get set }
+	var onSuccess: ((BannerView)-> Void)? { get set }
+	var onFailure: ((BannerView, String) -> Void)? { get set }
+	var onClick: ((BannerView) -> Void)? { get set }
 
-	func loadBanner()
-}
-
-public enum GroupType {
-	case none
-	case adGroup
-	case adSession
+	func load()
 }

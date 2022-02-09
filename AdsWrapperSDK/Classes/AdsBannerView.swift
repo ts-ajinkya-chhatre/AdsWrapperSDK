@@ -10,11 +10,11 @@ import RUNABanner
 
 public class AdsBannerView: RUNABannerView, BannerView
 {
-	public var onSuccessListener: ((BannerView)-> Void)?
-	public var onFailureListener: ((BannerView, String) -> Void)?
-	public var onClickListener: ((BannerView) -> Void)?
+	public var onSuccess: ((BannerView)-> Void)?
+	public var onFailure: ((BannerView, String) -> Void)?
+	public var onClick: ((BannerView) -> Void)?
 
-	init(adSpotID: String)
+	public init(adSpotID: String)
 	{
 		super.init(frame: CGRect.zero)
 		super.adSpotId = adSpotID
@@ -25,27 +25,27 @@ public class AdsBannerView: RUNABannerView, BannerView
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	public func loadBanner()
+	public override func load()
 	{
-		self.load
+		super.load
 		{ (_, event) in
 			switch event.eventType
 			{
 			case .succeeded:
-				self.onSuccessListener?(self)
+				self.onSuccess?(self)
 			case .failed:
 				switch event.error
 				{
 				case .unfilled:
 					print("ad unavailable")
-					self.onFailureListener?(self, "ad unavailable")
+					self.onFailure?(self, "ad unavailable")
 				case .network:
-					self.onFailureListener?(self, "network failure")
+					self.onFailure?(self, "network failure")
 				default:
 					break
 				}
 			case .clicked:
-				self.onClickListener?(self)
+				self.onClick?(self)
 			default:
 				break
 			}

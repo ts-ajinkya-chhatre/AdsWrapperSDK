@@ -33,24 +33,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOk-Me-YkH">
-                                <rect key="frame" x="175" y="259" width="65" height="30"/>
+                                <rect key="frame" x="175" y="349" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Single Ad"/>
+                                <connections>
+                                    <action selector="singleAdBtnCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xkh-6v-OfF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-yi-N2x">
-                                <rect key="frame" x="175" y="335" width="66" height="30"/>
+                                <rect key="frame" x="175" y="422" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="No Group"/>
                                 <connections>
                                     <action selector="noGroupBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36K-Fk-WVe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmx-rG-xsA">
-                                <rect key="frame" x="130" y="410" width="156" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AdSession"/>
-                                <connections>
-                                    <action selector="adSessionBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9SL-ns-TUZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-wf-LsB">
