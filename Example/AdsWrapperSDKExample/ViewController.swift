@@ -65,8 +65,8 @@ class ViewController: UIViewController {
 					print("Group Banner \(adView.adSpotId) Load Success")
 					self.multipleAdsVC?.groupAdViews.append(AdBannerView)
 					self.multipleAdsVC?.adsTableView.reloadData()
-				case .failure(_, let errorMessage):
-					print(errorMessage)
+				case .failure(let error):
+					print(error)
 			}
 		}
 

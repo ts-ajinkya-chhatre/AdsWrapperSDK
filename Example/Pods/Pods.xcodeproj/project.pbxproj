@@ -48,7 +48,7 @@
 		4FBF4D4ED580BD7089A5E57FDC7638F7 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */; };
 		51CBEC9D64E5015EADF2B26285B956D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		7CB7AE6367BF30C2C50BA160D2AC1D70 /* AdsWrapperSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1693537B857EBBADF39194342A9F761C /* AdsWrapperSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACA88D8927B376F4006BF60E /* AdGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA88D8827B376F4006BF60E /* AdGroup.swift */; };
+		ACB1F80927B4C140008B93E4 /* AdGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1F80827B4C140008B93E4 /* AdGroup.swift */; };
 		C2906F3ABE7BF282D852936F7A87C2C1 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138FD675F1C563C9DC5E39484E8A7DB /* AdBannerView.swift */; };
 		C91D357FF0FA3365E41C3E07A713EAE8 /* Pods-AdsWrapperSDKExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE87204CF68028651500E44733C6561 /* Pods-AdsWrapperSDKExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD79F8D187B71243CDB364539953B030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -138,7 +138,7 @@
 		9EEF613A50A5FFD095217E3D364BDB31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A803B41EC8EFF9015843B811D62FEC03 /* RUNACore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNACore.debug.xcconfig; sourceTree = "<group>"; };
 		AA5D8AE0E068A6F0598097ACAA54FF34 /* RUNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNA.release.xcconfig; sourceTree = "<group>"; };
-		ACA88D8827B376F4006BF60E /* AdGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdGroup.swift; sourceTree = "<group>"; };
+		ACB1F80827B4C140008B93E4 /* AdGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdGroup.swift; path = AdsWrapperSDK/Classes/AdGroup.swift; sourceTree = "<group>"; };
 		B13F66D61F8E18F747CB51DA72EAA40A /* Pods-AdsWrapperSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdsWrapperSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 		BE61BA0903DA40145931DF8C76A1BC85 /* RUNACore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RUNACore.release.xcconfig; sourceTree = "<group>"; };
 		C0504169B7598E1D7C74A6E5AA538D7A /* AdsWrapperSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdsWrapperSDK.debug.xcconfig; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				6138FD675F1C563C9DC5E39484E8A7DB /* AdBannerView.swift */,
+				ACB1F80827B4C140008B93E4 /* AdGroup.swift */,
 				82CD9B49FFA3EBC6F2DB56C4AA1F33C8 /* BannerView.swift */,
-				ACA88D8827B376F4006BF60E /* AdGroup.swift */,
 				FD481B77DE8F10A47407CC8664684432 /* Pod */,
 				A838E9393E6416B02ABF4C74D9300FF2 /* Support Files */,
 			);
@@ -477,8 +477,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2906F3ABE7BF282D852936F7A87C2C1 /* AdBannerView.swift in Sources */,
-				ACA88D8927B376F4006BF60E /* AdGroup.swift in Sources */,
 				32F81973D611A1A7391318EA9D94C9E8 /* AdsWrapperSDK-dummy.m in Sources */,
+				ACB1F80927B4C140008B93E4 /* AdGroup.swift in Sources */,
 				4FBF4D4ED580BD7089A5E57FDC7638F7 /* BannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

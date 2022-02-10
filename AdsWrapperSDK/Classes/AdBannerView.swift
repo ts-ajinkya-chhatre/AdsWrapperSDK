@@ -10,7 +10,7 @@ import RUNABanner
 
 public class AdBannerView: RUNABannerView, BannerView
 {
-	public var onAdLoaded: ((AdLoadResult<BannerView>) -> Void)?
+	public var onAdLoaded: ((Result<BannerView, Error>) -> Void)?
 	public var onClick: ((BannerView) -> Void)?
 
 	public init(adSpotID: String)
@@ -36,10 +36,9 @@ public class AdBannerView: RUNABannerView, BannerView
 				switch event.error
 				{
 				case .unfilled:
-					print("ad unavailable")
-					self.onAdLoaded?(.failure(self, "ad unavailable"))
+					self.onAdLoaded?(.failure(AdWrapperError.unfilled))
 				case .network:
-					self.onAdLoaded?(.failure(self, "ad unavailable"))
+					self.onAdLoaded?(.failure(AdWrapperError.network))
 				default:
 					break
 				}

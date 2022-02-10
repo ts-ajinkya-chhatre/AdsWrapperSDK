@@ -9,13 +9,17 @@ import Foundation
 
 public protocol BannerView
 {
-	var onAdLoaded: ((AdLoadResult<BannerView>) -> Void)? {get set}
+	var onAdLoaded: ((Result<BannerView, Error>) -> Void)? {get set}
 	var onClick: ((BannerView) -> Void)? { get set }
 	func load()
 }
 
-public enum AdLoadResult<Value>
+public enum AdWrapperError: Error
 {
-	case success(Value)
-	case failure(Value, String)
+	case none
+	case internalError
+	case network
+	case fatal
+	case unfilled
+	case unknown
 }

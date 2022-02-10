@@ -24,8 +24,8 @@ class BannerCell: UITableViewCell {
 			switch result {
 				case .success(_):
 					self.adLoadStateChangedAction?(true)
-				case .failure(_, let errorMessage):
-					print(errorMessage)
+				case .failure(let error):
+					print(error)
 			}
 		}
 

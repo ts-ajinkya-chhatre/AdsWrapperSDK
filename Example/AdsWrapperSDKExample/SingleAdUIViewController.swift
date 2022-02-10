@@ -20,8 +20,8 @@ class SingleAdUIViewController: UIViewController {
 				case .success(let bannerView):
 					guard let adView = bannerView as? AdBannerView else { return }
 					print("Group Banner \(adView.adSpotId) Load Success")
-				case .failure(_, let errorMessage):
-					print(errorMessage)
+				case .failure(let error):
+					print(error)
 			}
 		}
 
